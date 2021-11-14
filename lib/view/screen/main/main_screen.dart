@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class MainScreen extends StatelessWidget {
-  const MainScreen({Key? key}) : super(key: key);
+  final List<Widget> children;
+
+  const MainScreen({Key? key, required this.children}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +14,19 @@ class MainScreen extends StatelessWidget {
       body: Container(
         constraints: const BoxConstraints(maxWidth: maxWidth),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           // 2+7=9.
           children: [
             const SideMenu(),
-            Container()
-                .backgroundColor(Colors.blue)
+            defaultPadding.widthBox,
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  ...children,
+
+                ],
+              ),
+            )
                 .expand(flex: 7 // 7/9 = 78% width
                     ),
           ],

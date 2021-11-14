@@ -1,5 +1,5 @@
+import 'package:fire_folio/view/screen/home/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'view/screen/main/main_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'constants.dart';
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           bodyText2: const TextStyle(color: bodyTextColor),
         ),
       ),
-      home: const MainScreen(),
+      home: const HomeScreen(),
     );
   }
 }
