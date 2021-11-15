@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
-
 import '../../constants.dart';
 import 'animated_circular_progress_indicator.dart';
 
